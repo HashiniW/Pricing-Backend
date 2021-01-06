@@ -7,6 +7,5 @@ lstm_blueprint = Blueprint('lstm', __name__)
 lstm_blueprint_api = Api(lstm_blueprint)
 
 lstm_blueprint_api.add_resource(Predict, '/vegetable', methods=['GET'])
-lstm_blueprint_api.add_resource(Predict, '/user', methods=['POST'])
 
 
