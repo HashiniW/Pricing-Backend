@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
-from routes.lstm_price_route import lstm_blueprint
+from routes.lstm_price_route import lstm_price_blueprint
+from routes.lstm_route import lstm_blueprint
 from flask_cors import CORS
 import csv
 import json
@@ -10,6 +11,7 @@ CORS(server)
 server.config.from_object('config')
 
 server.register_blueprint(lstm_blueprint)
+server.register_blueprint(lstm_price_blueprint)
 
 #Set csv file path that program should have to read
 tomato_csvFilePath  = 'tomato.csv'
